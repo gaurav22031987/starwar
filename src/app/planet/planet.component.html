@@ -1,0 +1,7 @@
+<br/>
+<h4 class="card card-block card-header mb-3">Planet Details: {{planent.name}}</h4>
+<div>
+  <p *ngFor="let key of objectKeys(planent)">
+    <strong>{{key}}</strong> : {{planent[key]}}
+  </p>
+</div>

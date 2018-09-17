@@ -1,0 +1,11 @@
+
+<h5 class="card card-block card-header mb-3">User : {{userName}} <div class="pull-right"><button class="btn btn-primary" (click)="logOut()" >LogOut</button></div></h5>
+<alert type="danger" *ngIf=checkCondition() >
+  <strong>your can't search more than 15 search in one minute</strong>
+</alert>
+<h2>Search Plannet</h2>
+<input [(ngModel)]="selected" [typeahead]="planets" typeaheadOptionField="name" (typeaheadOnSelect)="typeaheadOnSelect($event)"
+  class="form-control">
+
+<app-planet [planent]=planetInformation *ngIf="planetInformation"></app-planet>
+
