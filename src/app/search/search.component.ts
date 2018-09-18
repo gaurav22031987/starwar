@@ -42,7 +42,7 @@ export class SearchComponent implements OnInit {
   checkCondition() {
     var date = new Date();
     if (this.startTime < new Date(date.getTime() + 1)) {
-      if (!(this.searchLenght < 5) && this.userName === "Luke Skywalker") {
+      if (!(this.searchLenght < 15) && this.userName !== "Luke Skywalker") {
         return true;
       }
     };
